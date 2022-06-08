@@ -25,7 +25,7 @@
 // Define Macro Keycodes
 enum custom_keycodes {
   EMAIL_XP = SAFE_RANGE,
-  MACRO2
+  BRANCH_XP
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, // 2
   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, // 3
   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,            XXXXXXX,  XXXXXXX,  XXXXXXX,           // 4
-  XXXXXXX,  RGB_HUI,  RGB_HUD,  RGB_SPD,  RGB_SPI,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,            RGB_VAI,  EMAIL_XP, XXXXXXX,  XXXXXXX,  XXXXXXX, // 5
+  XXXXXXX,  RGB_HUI,  RGB_HUD,  RGB_SPD,  RGB_SPI,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,            RGB_VAI,  EMAIL_XP, BRANCH_XP,XXXXXXX,  XXXXXXX, // 5
   XXXXXXX,  XXXXXXX,  XXXXXXX,                      XXXXXXX,                                XXXXXXX,  XXXXXXX,  XXXXXXX,  RGB_RMOD, RGB_VAD,  RGB_MOD,  XXXXXXX,  XXXXXXX            // 6
   ),
 
@@ -92,8 +92,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       break;
 
-    case MACRO2:
+    case BRANCH_XP:
       if (record->event.pressed) {
+        SEND_STRING("GR4NDIVI4ST3R_gmmk2");
       } else {
       }
       break;
