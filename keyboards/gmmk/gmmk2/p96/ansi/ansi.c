@@ -152,10 +152,6 @@ const aw_led g_aw_leds[DRIVER_LED_TOTAL] = {
     {1, CS16_SW10, CS17_SW10, CS18_SW10}  //  120, LED 20
 };
 
-#undef ___
-#define ___ NO_LED
-#define RGB_LAYOUT LAYOUT
-
 led_config_t g_led_config = { {
     { 0, 18, 36, 54, 70, 87, 14, 94},
     { 1, 19, 37, 55, NO_LED, 88, 15, 82},
@@ -171,7 +167,7 @@ led_config_t g_led_config = { {
     { 11, 29, 47, 65, 80, NO_LED, 53, 68},
     { 12, 30, 48, NO_LED, NO_LED, 93, NO_LED, 69},
     { 13, 31, 49, 66, 81, NO_LED, NO_LED, NO_LED}
-},{
+}, {
     { 11,    0}, //   0, k00, Esc
     { 22,    0}, //   1, k10, F1
     { 33,    0}, //   2, k20, F2
@@ -297,7 +293,7 @@ led_config_t g_led_config = { {
     { 209,  42}, // 118, LED 18
     { 209,  48}, // 119, LED 19
     { 209,  54}  // 120, LED 20
-},{
+}, {
     4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
     4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 4, 4, 4,
     4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
