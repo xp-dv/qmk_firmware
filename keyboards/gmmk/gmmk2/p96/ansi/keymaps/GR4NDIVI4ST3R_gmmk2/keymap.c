@@ -24,8 +24,9 @@
 
 // Define Macro Keycodes
 enum custom_keycodes {
-  EMAIL_XP = SAFE_RANGE,
-  BRANCH_XP
+  EMAIL_PS = SAFE_RANGE, // Type Out Personal Email
+  EMAIL_PF, // Type Out Professional Email
+  BRANCH_XP // Type Out Name of Frequently Used Git Branch
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -75,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, // 2
   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, // 3
   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,            XXXXXXX,  XXXXXXX,  XXXXXXX,           // 4
-  XXXXXXX,  RGB_HUI,  RGB_HUD,  RGB_SPD,  RGB_SPI,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,            RGB_VAI,  EMAIL_XP, BRANCH_XP,XXXXXXX,  XXXXXXX, // 5
+  XXXXXXX,  RGB_HUI,  RGB_HUD,  RGB_SPD,  RGB_SPI,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,            RGB_VAI,  EMAIL_PS, EMAIL_PF, BRANCH_XP,  XXXXXXX, // 5
   XXXXXXX,  XXXXXXX,  XXXXXXX,                      XXXXXXX,                                XXXXXXX,  XXXXXXX,  XXXXXXX,  RGB_RMOD, RGB_VAD,  RGB_MOD,  XXXXXXX,  XXXXXXX            // 6
   ),
 
@@ -84,10 +85,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Macro Execution
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case EMAIL_XP:
-      if (record->event.pressed) { // when keycode EMAIL_XP is pressed
+    case EMAIL_PS:
+      if (record->event.pressed) { // when given keycode is pressed
         SEND_STRING("xp.pk116@gmail.com");
-      } else { // when keycode EMAIL_XP is Released
+      } else { // when given keycode is Released
+
+      }
+      break;
+    
+    case EMAIL_PF:
+      if (record->event.pressed) { // when given keycode is pressed
+        SEND_STRING("ihsxaviorp@gmail.com");
+      } else { // when given keycode is Released
 
       }
       break;
